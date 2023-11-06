@@ -1,0 +1,49 @@
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+}
+
+.navbar-mobile-divider {
+    height: 1px;
+    width: 100%;
+    background-color: #a8a8a8;
+    margin-bottom: 1rem;
+    opacity: .1;
+}
+
+.btn-active {
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+.a-active {
+    color: #0c7cff !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.dropdown-from-top {
+    animation: fade-in .3s ease-in-out,
+               top-to-botton-slide-in .3s ease-in-out;
+}
+
+.dropdown-from-left {
+    animation: fade-in .3s ease-in-out,
+               left-to-right-slide-in .3s ease-in-out;
+}
+
+.dropdown-from-right {
+    animation: fade-in .3s ease-in-out,
+               right-to-left-slide-in .3s ease-in-out;
+}
+
+.dropdown-bg-expand {
+    transform: scaleY(1.35);
+}

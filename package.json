@@ -1,0 +1,19 @@
+{
+  "name": "navbarprocreate",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compile:sass": "node-sass src/scss/main.scss src/css/styles.css -w"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "jsdoc": "^4.0.2",
+    "node-sass": "^9.0.0"
+  }
+}
