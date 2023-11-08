@@ -1,4 +1,5 @@
 //Variables
+const navBar = document.querySelector(".main-navigation__nav");
 const navBarMobile = document.querySelector(".main-navigation__mobile");
 const toggleBtn = document.querySelector(".main-navigation__toggle-btn");
 const dropdownBg = document.querySelector(".main-navigation__dropdown-bg");
@@ -29,14 +30,31 @@ function replaceDropdownAni() {
   });
 }
 
+function HideAfterAnimationEnds(element) {
+  navBar.addEventListener(
+    "animationend",
+    () => {
+      element.setAttribute("data-visible", false);
+      navBar.classList.remove("fade-out");
+    },
+    {
+      once: true,
+    }
+  );
+}
+
 //For hamburger button to open and close mobile menu
 toggleBtn.addEventListener("click", () => {
   const visibility = navBarMobile.getAttribute("data-visible");
   if (visibility === "false") {
+    navBar.classList.add("fade-in");
     changeAttribute(navBarMobile, toggleBtn, true);
     document.body.classList.add("no-scroll");
   } else {
-    changeAttribute(navBarMobile, toggleBtn, false);
+    navBar.classList.replace("fade-in", "fade-out");
+    toggleBtn.setAttribute("aria-expanded", false);
+    // changeAttribute(navBarMobile, toggleBtn, false);
+    HideAfterAnimationEnds(navBarMobile);
     document.body.classList.remove("no-scroll");
   }
 });

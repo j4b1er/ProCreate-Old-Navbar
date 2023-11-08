@@ -218,7 +218,7 @@
       width: 100%;
       display: none;
 
-      animation: slide-down 0.3s ease-out, fade-in 0.3s ease-out;
+      // animation: slide-down 0.3s ease-out, fade-in 0.3s ease-out;
 
       &:has(.main-navigation__mobile[data-visible="true"]) {
         display: block;

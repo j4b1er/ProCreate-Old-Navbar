@@ -36,6 +36,12 @@
 .dropdown-bg-expand {
   transform: scaleY(1.35); }
 
+.fade-in {
+  animation: slide-down 0.3s ease-out, fade-in 0.3s ease-out; }
+
+.fade-out {
+  animation: slide-up 0.2s ease-out, fade-out 0.2s ease-out; }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -53,6 +59,12 @@
     transform: translateY(-2rem); }
   100% {
     transform: translateY(0); } }
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-2rem); } }
 
 @keyframes left-to-right-slide-in {
   0% {
@@ -223,8 +235,7 @@ body {
       .main-navigation__nav {
         flex: 1 1 100%;
         width: 100%;
-        display: none;
-        animation: slide-down 0.3s ease-out, fade-in 0.3s ease-out; }
+        display: none; }
         .main-navigation__nav:has(.main-navigation__mobile[data-visible="true"]) {
           display: block; }
       .main-navigation__toggle-btn {

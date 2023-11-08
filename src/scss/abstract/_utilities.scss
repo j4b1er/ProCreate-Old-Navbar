@@ -44,3 +44,11 @@
 .dropdown-bg-expand {
   transform: scaleY(1.35);
 }
+
+.fade-in {
+  animation: slide-down 0.3s ease-out, fade-in 0.3s ease-out;
+}
+
+.fade-out {
+  animation: slide-up 0.2s ease-out, fade-out 0.2s ease-out;
+}
